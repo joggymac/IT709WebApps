@@ -118,8 +118,45 @@ ORDER BY CityCode */
 
 /* SELECT DISTINCT CityCode AS 'SupplierCity' FROM Supplier */
 
-SELECT WhID, WAddress AS 'Warehouse Address' FROM Warehouse
-WHERE WAddress LIKE '%RD' OR WAddress LIKE '%St' OR CityCode < '3'
+/* SELECT WhID, WAddress AS 'Warehouse Address', CityCode FROM Warehouse
+WHERE CityCode < '3' AND WAddress LIKE '%RD' OR WAddress LIKE '%St' */
+
+/* SELECT Stkname, SellPrice FROM Stockitem
+WHERE SellPrice BETWEEN '10' AND '30' AND suppid <= 54 */
+
+/* SELECT WhID, Mgrname FROM Warehouse
+WHERE Capacity < 25000 OR Mgrname LIKE '%am%' */
+
+/* SELECT STKNAME, PURCHASEPRICE, WhID FROM StockItem
+WHERE PurchasePrice < 15 AND WhID LIKE '%21%' OR WhID LIKE '%24%'OR WhID LIKE '%25%' */
+
+/* SELECT MAX(PurchasePrice) AS 'Highest Purchase Price' FROM StockItem */
+
+/* SELECT AVG(sellprice) AS 'Average Selling Price' FROM StockItem
+WHERE WhID = '24' */
+
+/* SELECT Title, SUM (Quantity - QuantityOut) FROM M_Movie
+INNER JOIN M_Supplier ON M_Movie.SupplierID = M_Supplier.SupplierID
+WHERE SupplierName = 'South Videos' OR SupplierName = 'North Videos' OR SupplierName = 'Central Videos'
+GROUP BY Title */ 
+
+/* SELECT LastName, FirstName FROM M_Customer
+
+INNER JOIN M_Booking ON M_Customer.CustID = M_Booking.CustID
+INNER JOIN M_Movie ON M_Booking.MovieID = M_Movie.MovieID
+WHERE M_Movie.Title = 'Walking Tall' */
+/*
+ SELECT DISTINCT Title, Cat FROM M_Movie
+INNER JOIN M_Rental ON M_Movie.MovieID = M_Rental.MovieID
+INNER JOIN M_Customer ON M_Rental.CustID = M_customer.CustID
+INNER JOIN M_Supplier ON M_Movie.SupplierID = M_Supplier.SupplierID
+
+WHERE M_Supplier.SupplierName = 'North Videos' AND M_Customer.LastName = 'Jackson' AND M_Customer.FirstName = 'Sam' OR M_Customer.LastName = 'Cole' AND M_Customer.FirstNAme = 'Joe'
+*/
+
+SELECT (LastName + ' ' + FirstName) AS 'Customer name', COUNT(M_Rental.MovieID) FROM M_Customer 
+INNER JOIN M_Movie 
+
 
 
 
