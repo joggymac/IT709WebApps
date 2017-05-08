@@ -109,7 +109,18 @@ GROUP BY M_Supplier.SupplierID */
 /* SELECT CustID, COUNT(MovieID) AS MovieBook FROM M_Booking
 GROUP BY CustID */
 
-SELECT Cat, Description arge
+/* SELECT CityCode, CityName, City_pop FROM City
+ORDER BY CityName DESC */
+
+/* SELECT WhID, SUM (Capacity - Capacity_used) AS 'Unused Capacity' FROM Warehouse
+GROUP BY WhID, CityCode
+ORDER BY CityCode */
+
+/* SELECT DISTINCT CityCode AS 'SupplierCity' FROM Supplier */
+
+SELECT WhID, WAddress AS 'Warehouse Address' FROM Warehouse
+WHERE WAddress LIKE '%RD' OR WAddress LIKE '%St' OR CityCode < '3'
+
 
 
 
