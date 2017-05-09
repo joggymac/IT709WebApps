@@ -154,8 +154,25 @@ INNER JOIN M_Supplier ON M_Movie.SupplierID = M_Supplier.SupplierID
 WHERE M_Supplier.SupplierName = 'North Videos' AND M_Customer.LastName = 'Jackson' AND M_Customer.FirstName = 'Sam' OR M_Customer.LastName = 'Cole' AND M_Customer.FirstNAme = 'Joe'
 */
 
-SELECT (LastName + ' ' + FirstName) AS 'Customer name', COUNT(M_Rental.MovieID) FROM M_Customer 
-INNER JOIN M_Movie 
+/* SELECT (LastName + ' ' + FirstName) AS 'Customer name', COUNT(M_Rental.MovieID) FROM M_Customer 
+
+INNER JOIN M_Rental ON M_Customer.CustID = M_Rental.CustID
+INNER JOIN M_Movie ON M_Rental.MovieID = M_Movie.MovieID
+INNER JOIN M_Supplier ON M_Movie.SupplierID = M_Supplier.SupplierID
+WHERE M_Supplier.SupplierName = 'South Videos'
+GROUP BY LastName, Firstname */
+
+/* SELECT M_Supplier.SupplierName, AVG(M_Movie.PurchasePrice) FROM M_Supplier
+INNER JOIN M_Movie ON M_Movie.SupplierID = M_Supplier.SupplierID
+WHERE M_Movie.QuantityOut <> '1'
+GROUP BY M_Supplier.SupplierName  */
+
+/* SELECT Title, RentalPrice FROM M_Movie
+GROUP BY Title, RentalPrice
+HAVING AVG(RentalPrice) > RentalPrice */
+
+
+SELECT (LastName + ' ' + FirstName), (SELECT Max(discount) FROM M_Customer) AS MaxDis FROM M_Customer AS C
 
 
 
