@@ -6,6 +6,7 @@
 
 /* --------  create tables -----------------      */
 
+
 CREATE TABLE M_customer
 (CustID 	INT	     PRIMARY KEY,
  LastName	VARCHAR(25) NOT NULL,
