@@ -172,7 +172,22 @@ GROUP BY Title, RentalPrice
 HAVING AVG(RentalPrice) > RentalPrice */
 
 
-SELECT (LastName + ' ' + FirstName), (SELECT Max(discount) FROM M_Customer) AS MaxDis FROM M_Customer AS C
+/* SELECT CityCode, MIN(Capacity) FROM Warehouse
+
+GROUP BY CityCode
+HAVING MIN(Capacity) >= '20000' */
+
+/* SELECT CityCode, COUNT(suppid) AS 'Number of Suppliers' FROM Supplier
+WHERE suppname LIKE 'R%'
+GROUP BY CityCode */
+
+SELECT SuppID, AVG(sellprice) FROM Stockitem
+
+WHERE purchaseprice BETWEEN '9' AND '19'
+GROUP BY SuppID
+HAVING AVG(sellprice) > 20 
+
+
 
 
 
