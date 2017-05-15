@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ContosoUniversity.Models;
+﻿using ContosoUniversity.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Data
@@ -23,6 +19,5 @@ namespace ContosoUniversity.Data
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Student>().ToTable("Student");
         }
-
     }
 }
