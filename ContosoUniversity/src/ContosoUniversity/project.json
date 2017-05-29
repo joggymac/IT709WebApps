@@ -1,5 +1,5 @@
-{
-  "userSecretsId": "aspnet-ContosoUniversity-4efe2ef9-209b-48ad-99e1-3139bfb90ff2",
+﻿{
+  "userSecretsId": "aspnet-ContosoUniversity-329d0101-8bf0-40f2-8862-196329ef76ed",
 
   "dependencies": {
     "Microsoft.NETCore.App": {
@@ -20,7 +20,7 @@
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.2",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
     "Microsoft.EntityFrameworkCore.SqlServer.Design": {
       "version": "1.0.1",
       "type": "build"

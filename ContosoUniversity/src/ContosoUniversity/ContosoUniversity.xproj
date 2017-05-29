@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>5b15152a-b8f7-4ddc-9c25-c30bc66ef5b3</ProjectGuid>
+    <ProjectGuid>2c61f34c-b0a1-4ef6-92d2-d4ed174a2bf2</ProjectGuid>
     <RootNamespace>ContosoUniversity</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
