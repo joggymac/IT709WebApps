@@ -181,14 +181,13 @@ HAVING MIN(Capacity) >= '20000' */
 WHERE suppname LIKE 'R%'
 GROUP BY CityCode */
 
-/* CREATE PROCEDURE uspGetBookInfo
-AS 
-BEGIN 
-		SELECT * FROM M_Booking 
-		END
+SELECT SuppID, AVG(sellprice) FROM Stockitem
+
+WHERE purchaseprice BETWEEN '9' AND '19'
+GROUP BY SuppID
+HAVING AVG(sellprice) > 20 
 
 
-EXEC uspGetBookInfo /*
 
 
 
