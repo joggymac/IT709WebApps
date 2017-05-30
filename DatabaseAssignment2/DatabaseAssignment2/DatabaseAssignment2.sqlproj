@@ -60,5 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Tables.sql" />
+    <None Include="Attributes.sql" />
   </ItemGroup>
 </Project>
