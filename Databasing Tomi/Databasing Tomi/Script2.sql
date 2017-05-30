@@ -181,16 +181,24 @@ HAVING MIN(Capacity) >= '20000' */
 WHERE suppname LIKE 'R%'
 GROUP BY CityCode */
 
-SELECT SuppID, AVG(sellprice) FROM Stockitem
 
-WHERE purchaseprice BETWEEN '9' AND '19'
+/*WHERE purchaseprice BETWEEN '9' AND '19'
 GROUP BY SuppID
-HAVING AVG(sellprice) > 20 
+HAVING AVG(sellprice) > 20 */
 
+/* SELECT (LastName + ' ' + FirstName) AS Name FROM M_Customer
+WHERE Discount = (SELECT MAX(Discount) FROM M_Customer) */
 
+/* SELECT Title, RentalPrice FROM M_Movie
+WHERE (SELECT AVG(RentalPrice) FROM M_Movie) > RentalPrice */
 
+/*( LECT DISTINCT Title FROM M_Movie
+WHERE MovieID not in (select MovieID from M_Booking) */
 
+/* SELECT Cat, SUM(Quantity * PurchasePrice) AS 'Replacement Cost' FROM M_Movie
+WHERE Cat = 'DRA' OR Cat = 'MUS'
+GROUP BY Cat */
 
-
-
+SELECT SupplierID, SUM(Quantity + QuantityOut) FROM M_Movie
+GROUP BY SupplierID
 

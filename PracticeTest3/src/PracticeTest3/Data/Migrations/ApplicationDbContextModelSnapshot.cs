@@ -132,9 +132,10 @@ namespace PracticeTest3.Data.Migrations
 
                     b.Property<int>("GenreID");
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired();
 
-                    b.Property<DateTime>("Year");
+                    b.Property<int>("Year");
 
                     b.HasKey("AlbumID");
 
@@ -199,7 +200,8 @@ namespace PracticeTest3.Data.Migrations
                     b.Property<int>("ArtistID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ArtistID");
 
@@ -211,7 +213,8 @@ namespace PracticeTest3.Data.Migrations
                     b.Property<int>("GenreID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("GenreID");
 
@@ -224,6 +227,8 @@ namespace PracticeTest3.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AlbumID");
+
+                    b.Property<string>("Path");
 
                     b.Property<string>("Title");
 
