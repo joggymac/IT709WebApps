@@ -18,10 +18,17 @@ INSERT INTO D_Customer VALUES (2003, 'James', 'McGarth');
 INSERT INTO D_Customer VALUES (2004, 'Lucy', 'Luu');
 INSERT INTO D_Customer VALUES (2005, 'Bill', 'Robertson');
 
-INSERT INTO D_Customer_Orders VALUES (1001, 31-05-2017, 2001, 'Processing');
-INSERT INTO D_Customer_Orders VALUES (1002, 01-06-2017, 2001, 'Processing');
-INSERT INTO D_Customer_Orders VALUES (1003, 28-05-2017, 2003, 'In Transit');
-INSERT INTO D_Customer_Orders VALUES (1004, 21-05-2017, 2005, 'Arrived');
-INSERT INTO D_Customer_Orders VALUES (1005, 01-06-2017, 2004, 'Processing');
+INSERT INTO D_Customer_Orders VALUES (1001, '2017-06-1', 2001, 'Processing');
+INSERT INTO D_Customer_Orders VALUES (1002, '2017-05-31', 2001, 'Processing');
+INSERT INTO D_Customer_Orders VALUES (1003, '2017-05-28', 2003, 'In Transit');
+INSERT INTO D_Customer_Orders VALUES (1004, '2017-05-20', 2005, 'Arrived');
+INSERT INTO D_Customer_Orders VALUES (1005, '2017-05-21', 2004, 'Processing');
 
-INSERT INTO D_Sales_Rep
+INSERT INTO D_Sales_Rep VALUES (2001, 'Mcgarth', 'Fred');
+INSERT INTO D_Sales_Rep VALUES (2004, 'Mcgarth', 'Fred');
+INSERT INTO D_Sales_Rep VALUES (2002, 'Carry', 'Jim');
+INSERT INTO D_Sales_Rep VALUES (2003, 'Carry', 'Jim');
+INSERT INTO D_Sales_Rep VALUES (2004, 'Jeremy', 'Richard');
+
+COMMIT TRANSACTION;
+GO

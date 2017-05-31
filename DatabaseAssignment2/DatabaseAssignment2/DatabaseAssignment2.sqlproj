@@ -61,5 +61,7 @@
   <ItemGroup>
     <None Include="Tables.sql" />
     <None Include="Attributes.sql" />
+    <None Include="Procedure.sql" />
+    <None Include="Script1.sql" />
   </ItemGroup>
 </Project>

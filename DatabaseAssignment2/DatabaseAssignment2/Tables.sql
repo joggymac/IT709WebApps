@@ -36,7 +36,6 @@ Order_Status		VARCHAR(10) NOT NULL,
 )
 
 CREATE TABLE D_Sales_Rep (
-SalesrepID			INT NOT NULL PRIMARY KEY,
 CustID				INT NOT NULL REFERENCES D_Customer(CustID),
 Lname				VARCHAR(20) NOT NULL,
 Fname				VARCHAR(20) NOT NULL,
