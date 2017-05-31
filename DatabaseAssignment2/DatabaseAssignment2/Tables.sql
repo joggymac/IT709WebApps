@@ -1,4 +1,5 @@
-﻿DROP TABLE D_Sales_Rep
+﻿DROP TABLE D_Customer_Orders
+DROP TABLE D_Sales_Rep
 DROP TABLE D_Customer
 DROP TABLE D_Order
 DROP TABLE D_Product
@@ -17,17 +18,21 @@ CREATE TABLE D_Order (
 OrderID				INT NOT NULL PRIMARY KEY,
 ProductID			INT NOT NULL REFERENCES D_Product(ProductID),
 No_of_Units			INT NOT NULL,
-Order_Status		VARCHAR(20) NOT NULL,
 Quoated_Price		MONEY NOT NULL
 )
 
 CREATE TABLE D_Customer (
 CustID				INT PRIMARY KEY,
-OrderID				INT REFERENCES D_Order(OrderID),
 Lname				VARCHAR(20) NOT NULL,
 Fname				VARCHAR(20) NOT NULL,
-Order_Date			DATE NOT NULL,
 
+)
+
+CREATE TABLE D_Customer_Orders(
+OrderID				INT REFERENCES D_Order(OrderID),
+Date				DATE NOT NULL,
+CustID				INT REFERENCES D_Customer,
+Order_Status		VARCHAR(10) NOT NULL,
 )
 
 CREATE TABLE D_Sales_Rep (
