@@ -1,1 +1,2 @@
 ﻿DROP PROCEDURE InsertCustomerRecord
+DROP PROCEDURE DeleteOrderRecord

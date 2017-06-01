@@ -2,14 +2,17 @@
 
 CREATE PROCEDURE InsertCustomerRecord
 (
-@CustID int,
-@Lname VARCHAR(20),
-@Fname VARCHAR(20)
+	@CustID int,
+	@Lname VARCHAR(20),
+	@Fname VARCHAR(20)
 )
 AS
 BEGIN 
-		INSERT INTO D_Customer (CustID, Lname, Fname)
-		VALUES (2006, 'Fletcher', 'Jack')
+		INSERT INTO dbo.D_Customer (CustID, Lname, Fname)
+		VALUES (@CustID, @Lname, @Fname)
 END
 
-EXECUTE InsertCustomerRecord
+EXECUTE InsertCustomerRecord 2007, Fredrick, Andy
+
+SELECT * FROM D_Customer
+
