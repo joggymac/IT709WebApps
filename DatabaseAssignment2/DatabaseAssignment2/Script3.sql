@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE ProductDiscountRaise
+ (
+ @Discount
+ )
