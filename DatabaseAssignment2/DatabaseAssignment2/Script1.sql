@@ -1,2 +1,3 @@
 ﻿DROP PROCEDURE InsertCustomerRecord
 DROP PROCEDURE DeleteOrderRecord
+DROP PROCEDURE ProductDiscountRaise
