@@ -1,13 +1,13 @@
 ﻿CREATE PROCEDURE ProductDiscountRaise
 (
-	@ProductID int
+	@Discount int
 )
 	AS
 	BEGIN
-	IF (Discount < 1) OR (Discount > 1)
-	UPDATE D_Product SET Discount = @Discount + 1;
+	IF EXISTS (Select * FROM D_Product WHERE @Discount > 0 OR @Discount < 1)
+	Update D_Product SET Discount = @Discount + 1;
 	ELSE 
 	PRINT 'Error: Value must be greater than 0 and less than 1'
 END
 
-EXEC ProductDiscountRaise 
+EXEC ProductDiscountRaise 0
