@@ -2,16 +2,19 @@
 INSTEAD OF DELETE
 AS
 	DECLARE @ProductID int;
-	DECLARE @OrderID int;
 
+	
+	SELECT @ProductID=d.ProductID FROM DELETED d
 
-	SELECT @ProductID=d.ProductID FROM DELETED d;
-	SELECT @OrderID=d.OrderID FROM DELETED d;
-
-	BEGIN 
-			DELETE FROM D_Customer_Orders WHERE OrderID = @OrderID
-			DELETE FROM D_Order WHERE OrderID = @OrderID;
+	BEGIN
+			DELETE FROM D_Order WHERE ProductID = @ProductID
 			DELETE FROM D_Product WHERE ProductID = @ProductID
-	END
+	END;
+
+	DROP TRIGGER deletedprouduct
+
+	DELETE FROM D_Product WHERE ProductID = 005
 
 
+
+SELECT * FROM D_Product
