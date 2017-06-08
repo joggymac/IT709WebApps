@@ -10,7 +10,7 @@ Description			VARCHAR(20) NOT NULL,
 Min_Level			INT NOT NULL,
 Cat					VARCHAR(20) NOT NULL,
 Unit_Price			MONEY NOT NULL,
-Discount			INT NOT NULL
+Discount			INT
 )
 
 CREATE TABLE D_Customer (
