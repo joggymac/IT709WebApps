@@ -67,5 +67,6 @@
     <None Include="Script3.sql" />
     <None Include="Trigger.sql" />
     <None Include="Trigger2.sql" />
+    <None Include="Procedure 3.sql" />
   </ItemGroup>
 </Project>

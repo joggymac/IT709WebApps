@@ -1,12 +1,17 @@
 ﻿CREATE PROCEDURE DeleteOrderRecord
 
-	@OrderID int
+	@CustID int
 
 AS
 BEGIN
-DELETE FROM D_Customer_Orders WHERE OrderID = @OrderID
-DELETE FROM D_Order WHERE OrderID = @OrderID
+DELETE FROM D_Sales_Rep WHERE CustID = @CustID
+DELETE FROM D_Order WHERE CustID = @CustID
+DELETE FROM D_Customer WHERE CustID = @CustID
+
 END
 GO
 
-EXECUTE DeleteOrderRecord 1005
+DROP PROCEDURE DeleteOrderRecord
+EXECUTE DeleteOrderRecord 2001
+
+SELECT * FROM D_Customer, D_Order

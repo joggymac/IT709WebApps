@@ -26,8 +26,8 @@ ProductID			INT NOT NULL REFERENCES D_Product(ProductID),
 CustID				INT REFERENCES D_Customer(CustID),
 No_of_Units			INT NOT NULL,
 Quoated_Price		MONEY NOT NULL,
-Date				DATE NOT NULL,
-Order_Status		VARCHAR(10) NOT NULL
+Date				DATE DEFAULT GETDATE() NOT NULL,
+Order_Status		VARCHAR(10) DEFAULT 'Processing' NOT NULL
 )
 
 CREATE TABLE D_Sales_Rep (
@@ -35,3 +35,8 @@ CustID				INT NOT NULL REFERENCES D_Customer(CustID),
 Lname				VARCHAR(20) NOT NULL,
 Fname				VARCHAR(20) NOT NULL,
 )
+
+SELECT * FROM D_Product
+SELECT * FROM D_Customer
+SELECT * FROM D_Order
+SELECT * FROM D_Sales_Rep
