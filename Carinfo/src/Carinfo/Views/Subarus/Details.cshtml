@@ -1,0 +1,54 @@
+@model Carinfo.Models.Subaru
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subaru</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Displacement)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Displacement)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Power)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Power)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Torque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Torque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.img)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.img)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SubaruID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
